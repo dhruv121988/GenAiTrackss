@@ -1,0 +1,194 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pentathon 3.0 | Tracks</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bgFx"></div>
+  <canvas id="stars"></canvas>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <div class="brandSmall">Cintel's NextGen AI </div>
+        <div class="brandBig">PENTATHON 3.0 - TRACKS</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="ghostBtn" href="#tracks">Explore</a>
+      <a class="primaryBtn" href="https://forms.gle/Ln9zJooH7D7To6Sy9" target="_blank" rel="noopener">Register</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="heroCard reveal">
+      <div class="heroTags">
+        <span class="chip">18-20</span>
+        <span class="chip soft">SRM IST</span>
+        <span class="chip soft">24hr Hackathon Series</span>
+      </div>
+
+      <h1 class="heroTitle">
+        Choose Your <span class="neon">Track</span>
+      </h1>
+
+      <p class="heroSub">
+        Appathon 3.0  Datathon 3.0  Webathon 3.0  Hackstreet 4.0  Ideathon 3.0
+      </p>
+
+      <div class="heroLine"></div>
+
+      <div class="miniRow">
+        <div class="miniBox">
+          <div class="miniLabel">Team Size</div>
+          <div class="miniValue">4</div>
+        </div>
+        <div class="miniBox">
+          <div class="miniLabel">Fees</div>
+          <div class="miniValue">Rs349 / <span class="highlight">Rs529</span></div>
+        </div>
+        <div class="miniBox">
+          <div class="miniLabel">Round-1</div>
+          <div class="miniValue">Online</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap" id="tracks">
+    <div class="sectionHead reveal">
+      <h2>Flagship Tracks</h2>
+    </div>
+
+    <div class="grid">
+      <article class="trackCard appathon reveal tilt">
+        <div class="cardGlow"></div>
+        <div class="cardTop">
+          <span class="badge">APPATHON 3.0</span>
+          <span class="pulse"></span>
+        </div>
+        <img class="trackImg" src="assets/appathon.png" alt="Appathon 3.0">
+        <h3>Appathon 3.0</h3>
+        <p>Build a powerful, user-friendly mobile application with real-world impact.</p>
+        <button class="detailBtn" data-open="appathon">View Details</button>
+      </article>
+
+      <article class="trackCard datathon reveal tilt">
+        <div class="cardGlow"></div>
+        <div class="cardTop">
+          <span class="badge">DATATHON 3.0</span>
+          <span class="pulse"></span>
+        </div>
+        <img class="trackImg" src="assets/datathon.png" alt="Datathon 3.0">
+        <h3>Datathon 3.0</h3>
+        <p>Explore data, extract insights, and present results with clarity.</p>
+        <button class="detailBtn" data-open="datathon">View Details</button>
+      </article>
+
+      <article class="trackCard webathon reveal tilt">
+        <div class="cardGlow"></div>
+        <div class="cardTop">
+          <span class="badge">WEBATHON 3.0</span>
+          <span class="pulse"></span>
+        </div>
+        <img class="trackImg" src="assets/webathon.png" alt="Webathon 3.0">
+        <h3>Webathon 3.0</h3>
+        <p>Create modern web experiences with clean UI/UX and solid logic.</p>
+        <button class="detailBtn" data-open="webathon">View Details</button>
+      </article>
+
+      <article class="trackCard hackstreet reveal tilt">
+        <div class="cardGlow"></div>
+        <div class="cardTop">
+          <span class="badge">HACKSTREET 4.0</span>
+          <span class="pulse"></span>
+        </div>
+        <img class="trackImg" src="assets/hackstreet.png" alt="Hackstreet 4.0">
+        <h3>Hackstreet 4.0</h3>
+        <p>High-intensity sprint: build, test, and demo under serious time pressure.</p>
+        <button class="detailBtn" data-open="hackstreet">View Details</button>
+      </article>
+
+      <article class="trackCard ideathon reveal tilt">
+        <div class="cardGlow"></div>
+        <div class="cardTop">
+          <span class="badge">IDEATHON 3.0</span>
+          <span class="pulse"></span>
+        </div>
+        <img class="trackImg" src="assets/ideathon.png" alt="Ideathon 3.0">
+        <h3>Ideathon 3.0</h3>
+        <p>Pitch an innovative idea with feasibility, roadmap, and impact.</p>
+        <button class="detailBtn" data-open="ideathon">View Details</button>
+      </article>
+    </div>
+
+    <div class="footNote reveal">
+      <div class="noteCard">
+        <div class="noteTitle">Round-1 Online</div>
+        <div class="noteText">Participation certificates for Round-1. Problem statements will be emailed after registrations close.</div>
+      </div>
+      <div class="noteCard">
+        <div class="noteTitle">Queries</div>
+        <div class="noteText mono">
+        <a href="mailto:nextgenai@srmist.edu.in">
+          <button class="primaryBtn">Connect here</button>
+        </a>
+      </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modalOverlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="x" id="closeModal" aria-label="Close"></button>
+
+      <div class="modalHeader">
+        <img class="modalTrackImg" id="modalIcon" alt="Track icon">
+        <div>
+          <div class="modalBadge" id="modalBadge">TRACK</div>
+          <h3 class="modalTitle" id="modalTitle">Title</h3>
+        </div>
+      </div>
+
+      <p class="modalDesc" id="modalDesc"></p>
+
+      <div class="modalGrid">
+        <div class="mBox">
+          <div class="mLabel">Date</div>
+          <div class="mValue">18-20</div>
+        </div>
+        <div class="mBox">
+          <div class="mLabel">Team Size</div>
+          <div class="mValue">4</div>
+        </div>
+        <div class="mBox">
+          <div class="mLabel">Round-1</div>
+          <div class="mValue">Online</div>
+        </div>
+        <div class="mBox">
+          <div class="mLabel">Prizes</div>
+          <div class="mValue">10k | 6k | 4k</div>
+        </div>
+      </div>
+
+      <div class="modalActions">
+        <a class="primaryBtn" href="https://forms.gle/Ln9zJooH7D7To6Sy9" target="_blank" rel="noopener">Register</a>
+        <button class="ghostBtn" id="copyLink">Copy Registration Link</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
